@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8359440DDBA236E39D46EC04 /* Pods_NeumannTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF14ED964EAE83A810D6955 /* Pods_NeumannTests.framework */; };
 		B21C782D7FA7D03DC40A0D83 /* Pods_Neumann.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */; };
 		F3D9CA3C23CC86220024BA92 /* Neumann.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D9CA3A23CC86220024BA92 /* Neumann.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3D9CA6323CC87D10024BA92 /* MUView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4723CC87D10024BA92 /* MUView+Gradient.swift */; };
@@ -35,12 +36,29 @@
 		F3D9CA7A23CC87D10024BA92 /* MUQuad+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA6023CC87D10024BA92 /* MUQuad+UIView.swift */; };
 		F3D9CA7B23CC87D10024BA92 /* MUMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA6123CC87D10024BA92 /* MUMatrix.swift */; };
 		F3D9CA7C23CC87D10024BA92 /* MUQuad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA6223CC87D10024BA92 /* MUQuad.swift */; };
+		F3D9CA8623CC88690024BA92 /* Neumann.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D9CA3723CC86220024BA92 /* Neumann.framework */; };
+		F3D9CA9123CC88920024BA92 /* MUColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA8C23CC88920024BA92 /* MUColorTests.swift */; };
+		F3D9CA9223CC88920024BA92 /* MUMatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA8E23CC88920024BA92 /* MUMatrixTests.swift */; };
+		F3D9CA9323CC88920024BA92 /* MUViewGradientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA9023CC88920024BA92 /* MUViewGradientTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3D9CA8723CC88690024BA92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3D9CA2E23CC86220024BA92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3D9CA3623CC86220024BA92;
+			remoteInfo = Neumann;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		153484368F613B026F6BA0FC /* Pods-Neumann.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neumann.debug.xcconfig"; path = "Target Support Files/Pods-Neumann/Pods-Neumann.debug.xcconfig"; sourceTree = "<group>"; };
+		B5FA204DCA0774634AC348F2 /* Pods-NeumannTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeumannTests.release.xcconfig"; path = "Target Support Files/Pods-NeumannTests/Pods-NeumannTests.release.xcconfig"; sourceTree = "<group>"; };
+		D278D92DFC9B032D9B21D122 /* Pods-NeumannTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeumannTests.debug.xcconfig"; path = "Target Support Files/Pods-NeumannTests/Pods-NeumannTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neumann.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AB8FDB1C1D09344ECEC6B2 /* Pods-Neumann.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neumann.release.xcconfig"; path = "Target Support Files/Pods-Neumann/Pods-Neumann.release.xcconfig"; sourceTree = "<group>"; };
+		ECF14ED964EAE83A810D6955 /* Pods_NeumannTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeumannTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D9CA3723CC86220024BA92 /* Neumann.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Neumann.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D9CA3A23CC86220024BA92 /* Neumann.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Neumann.h; sourceTree = "<group>"; };
 		F3D9CA3B23CC86220024BA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +90,11 @@
 		F3D9CA6023CC87D10024BA92 /* MUQuad+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MUQuad+UIView.swift"; sourceTree = "<group>"; };
 		F3D9CA6123CC87D10024BA92 /* MUMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUMatrix.swift; sourceTree = "<group>"; };
 		F3D9CA6223CC87D10024BA92 /* MUQuad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUQuad.swift; sourceTree = "<group>"; };
+		F3D9CA8123CC88690024BA92 /* NeumannTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeumannTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D9CA8523CC88690024BA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D9CA8C23CC88920024BA92 /* MUColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUColorTests.swift; sourceTree = "<group>"; };
+		F3D9CA8E23CC88920024BA92 /* MUMatrixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUMatrixTests.swift; sourceTree = "<group>"; };
+		F3D9CA9023CC88920024BA92 /* MUViewGradientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUViewGradientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +106,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3D9CA7E23CC88690024BA92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D9CA8623CC88690024BA92 /* Neumann.framework in Frameworks */,
+				8359440DDBA236E39D46EC04 /* Pods_NeumannTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */,
+				ECF14ED964EAE83A810D6955 /* Pods_NeumannTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,6 +132,8 @@
 			children = (
 				153484368F613B026F6BA0FC /* Pods-Neumann.debug.xcconfig */,
 				D7AB8FDB1C1D09344ECEC6B2 /* Pods-Neumann.release.xcconfig */,
+				D278D92DFC9B032D9B21D122 /* Pods-NeumannTests.debug.xcconfig */,
+				B5FA204DCA0774634AC348F2 /* Pods-NeumannTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -108,6 +143,7 @@
 			children = (
 				F3D9CA4323CC86F20024BA92 /* Config */,
 				F3D9CA3923CC86220024BA92 /* Neumann */,
+				F3D9CA8223CC88690024BA92 /* NeumannTests */,
 				F3D9CA3823CC86220024BA92 /* Products */,
 				77239614E90790FBACD8BC41 /* Pods */,
 				44D4D73185216C35916DEA1D /* Frameworks */,
@@ -118,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				F3D9CA3723CC86220024BA92 /* Neumann.framework */,
+				F3D9CA8123CC88690024BA92 /* NeumannTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +235,33 @@
 			path = Quad_Matrix;
 			sourceTree = "<group>";
 		};
+		F3D9CA8223CC88690024BA92 /* NeumannTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA8C23CC88920024BA92 /* MUColorTests.swift */,
+				F3D9CA8D23CC88920024BA92 /* MUMatrix_Quad */,
+				F3D9CA8F23CC88920024BA92 /* MUView */,
+				F3D9CA8523CC88690024BA92 /* Info.plist */,
+			);
+			path = NeumannTests;
+			sourceTree = "<group>";
+		};
+		F3D9CA8D23CC88920024BA92 /* MUMatrix_Quad */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA8E23CC88920024BA92 /* MUMatrixTests.swift */,
+			);
+			path = MUMatrix_Quad;
+			sourceTree = "<group>";
+		};
+		F3D9CA8F23CC88920024BA92 /* MUView */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA9023CC88920024BA92 /* MUViewGradientTests.swift */,
+			);
+			path = MUView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -231,18 +295,41 @@
 			productReference = F3D9CA3723CC86220024BA92 /* Neumann.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F3D9CA8023CC88690024BA92 /* NeumannTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D9CA8923CC88690024BA92 /* Build configuration list for PBXNativeTarget "NeumannTests" */;
+			buildPhases = (
+				6BFFFAC926E5CCEB4C819EC9 /* [CP] Check Pods Manifest.lock */,
+				F3D9CA7D23CC88690024BA92 /* Sources */,
+				F3D9CA7E23CC88690024BA92 /* Frameworks */,
+				F3D9CA7F23CC88690024BA92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3D9CA8823CC88690024BA92 /* PBXTargetDependency */,
+			);
+			name = NeumannTests;
+			productName = NeumannTests;
+			productReference = F3D9CA8123CC88690024BA92 /* NeumannTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F3D9CA2E23CC86220024BA92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Loïc GRIFFIE";
 				TargetAttributes = {
 					F3D9CA3623CC86220024BA92 = {
 						CreatedOnToolsVersion = 11.3;
 						LastSwiftMigration = 1130;
+					};
+					F3D9CA8023CC88690024BA92 = {
+						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
@@ -260,12 +347,20 @@
 			projectRoot = "";
 			targets = (
 				F3D9CA3623CC86220024BA92 /* Neumann */,
+				F3D9CA8023CC88690024BA92 /* NeumannTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F3D9CA3523CC86220024BA92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D9CA7F23CC88690024BA92 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,6 +386,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Neumann-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BFFFAC926E5CCEB4C819EC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeumannTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -333,7 +450,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3D9CA7D23CC88690024BA92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D9CA9223CC88920024BA92 /* MUMatrixTests.swift in Sources */,
+				F3D9CA9323CC88920024BA92 /* MUViewGradientTests.swift in Sources */,
+				F3D9CA9123CC88920024BA92 /* MUColorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3D9CA8823CC88690024BA92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3D9CA3623CC86220024BA92 /* Neumann */;
+			targetProxy = F3D9CA8723CC88690024BA92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F3D9CA3D23CC86220024BA92 /* Debug */ = {
@@ -513,6 +648,44 @@
 			};
 			name = Release;
 		};
+		F3D9CA8A23CC88690024BA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D278D92DFC9B032D9B21D122 /* Pods-NeumannTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S47LZ927R6;
+				INFOPLIST_FILE = NeumannTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.surfin.Neumann.NeumannTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3D9CA8B23CC88690024BA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FA204DCA0774634AC348F2 /* Pods-NeumannTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S47LZ927R6;
+				INFOPLIST_FILE = NeumannTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.surfin.Neumann.NeumannTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -530,6 +703,15 @@
 			buildConfigurations = (
 				F3D9CA4023CC86220024BA92 /* Debug */,
 				F3D9CA4123CC86220024BA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D9CA8923CC88690024BA92 /* Build configuration list for PBXNativeTarget "NeumannTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D9CA8A23CC88690024BA92 /* Debug */,
+				F3D9CA8B23CC88690024BA92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
