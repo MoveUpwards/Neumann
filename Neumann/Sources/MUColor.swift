@@ -37,7 +37,7 @@ extension UIColor {
      - to: The second color.
      - fraction: The percent of current color and second one.
      */
-    internal func interpolate(to: UIColor, fraction: CGFloat) -> UIColor? {
+    public func interpolate(to: UIColor, fraction: CGFloat) -> UIColor? {
         let f = min(max(0, fraction), 1) // Ensure that fraction is between 0 and 1
         return UIColor(red: r + (to.r - r) * f,
                        green: g + (to.g - g) * f,

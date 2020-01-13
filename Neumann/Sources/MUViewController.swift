@@ -32,7 +32,7 @@ extension UIViewController {
     }
 
     /// Return the safeAreaFrame for iOS 9.0+
-    internal var areaFrame: CGRect {
+    public var areaFrame: CGRect {
         var areaFrame: CGRect
         if #available(iOS 11.0, *) {
             areaFrame = view.safeAreaLayoutGuide.layoutFrame

@@ -21,7 +21,7 @@ extension NSLayoutConstraint {
      - parameter c: CGFloat Will be 0.0 if missing
      - returns: NSLayoutConstraint
      */
-    internal convenience init(item view1: Any,
+    public convenience init(item view1: Any,
                               attribute attr1: NSLayoutConstraint.Attribute,
                               relatedBy relation: NSLayoutConstraint.Relation,
                               toItem view2: Any?,

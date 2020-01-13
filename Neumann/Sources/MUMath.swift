@@ -22,12 +22,12 @@ public protocol MUFloatingPoint: FloatingPoint {
 
 extension FloatingPoint {
     /// Convert current degrees to radians
-    internal var toRadians: Self {
+    public var toRadians: Self {
         return .pi * self / Self(180)
     }
 
     /// Convert current radians to degrees
-    internal var toDegrees: Self {
+    public var toDegrees: Self {
         return self * Self(180) / .pi
     }
 }

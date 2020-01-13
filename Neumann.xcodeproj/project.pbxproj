@@ -40,6 +40,7 @@
 		F3D9CA9123CC88920024BA92 /* MUColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA8C23CC88920024BA92 /* MUColorTests.swift */; };
 		F3D9CA9223CC88920024BA92 /* MUMatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA8E23CC88920024BA92 /* MUMatrixTests.swift */; };
 		F3D9CA9323CC88920024BA92 /* MUViewGradientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA9023CC88920024BA92 /* MUViewGradientTests.swift */; };
+		F3D9CA9523CC8F5E0024BA92 /* MUCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA9423CC8F5E0024BA92 /* MUCoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		F3D9CA8C23CC88920024BA92 /* MUColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUColorTests.swift; sourceTree = "<group>"; };
 		F3D9CA8E23CC88920024BA92 /* MUMatrixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUMatrixTests.swift; sourceTree = "<group>"; };
 		F3D9CA9023CC88920024BA92 /* MUViewGradientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUViewGradientTests.swift; sourceTree = "<group>"; };
+		F3D9CA9423CC8F5E0024BA92 /* MUCoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUCoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 		F3D9CA8223CC88690024BA92 /* NeumannTests */ = {
 			isa = PBXGroup;
 			children = (
+				F3D9CA9423CC8F5E0024BA92 /* MUCoreTests.swift */,
 				F3D9CA8C23CC88920024BA92 /* MUColorTests.swift */,
 				F3D9CA8D23CC88920024BA92 /* MUMatrix_Quad */,
 				F3D9CA8F23CC88920024BA92 /* MUView */,
@@ -456,6 +459,7 @@
 			files = (
 				F3D9CA9223CC88920024BA92 /* MUMatrixTests.swift in Sources */,
 				F3D9CA9323CC88920024BA92 /* MUViewGradientTests.swift in Sources */,
+				F3D9CA9523CC8F5E0024BA92 /* MUCoreTests.swift in Sources */,
 				F3D9CA9123CC88920024BA92 /* MUColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

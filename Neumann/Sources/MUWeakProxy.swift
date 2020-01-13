@@ -22,7 +22,7 @@ final public class MUWeakProxy {
     }
 
     @objc
-    func onScreenUpdate() {
+    public func onScreenUpdate() {
         target?.updateIfNeeded()
     }
 }
