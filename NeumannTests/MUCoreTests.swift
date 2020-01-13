@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Sejima
+@testable import Neumann
 
 class MUCoreTests: XCTestCase {
 
