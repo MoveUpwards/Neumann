@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B21C782D7FA7D03DC40A0D83 /* Pods_Neumann.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */; };
+		F3D9CA3C23CC86220024BA92 /* Neumann.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D9CA3A23CC86220024BA92 /* Neumann.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3D9CA6323CC87D10024BA92 /* MUView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4723CC87D10024BA92 /* MUView+Gradient.swift */; };
+		F3D9CA6423CC87D10024BA92 /* MUView+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4823CC87D10024BA92 /* MUView+LayoutConstraint.swift */; };
+		F3D9CA6523CC87D10024BA92 /* MUView+Dash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4923CC87D10024BA92 /* MUView+Dash.swift */; };
+		F3D9CA6623CC87D10024BA92 /* MUView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4A23CC87D10024BA92 /* MUView+Autolayout.swift */; };
+		F3D9CA6723CC87D10024BA92 /* MULayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4B23CC87D10024BA92 /* MULayoutAnchor.swift */; };
+		F3D9CA6823CC87D10024BA92 /* MUView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4C23CC87D10024BA92 /* MUView+Layer.swift */; };
+		F3D9CA6923CC87D10024BA92 /* MUAutolayoutPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4D23CC87D10024BA92 /* MUAutolayoutPosition.swift */; };
+		F3D9CA6A23CC87D10024BA92 /* MUWeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4E23CC87D10024BA92 /* MUWeakProxy.swift */; };
+		F3D9CA6B23CC87D10024BA92 /* MURange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4F23CC87D10024BA92 /* MURange.swift */; };
+		F3D9CA6C23CC87D10024BA92 /* MUActivityIndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5123CC87D10024BA92 /* MUActivityIndicatorProtocol.swift */; };
+		F3D9CA6D23CC87D10024BA92 /* MUCornerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */; };
+		F3D9CA6E23CC87D10024BA92 /* MUKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5323CC87D10024BA92 /* MUKeyboard.swift */; };
+		F3D9CA6F23CC87D10024BA92 /* MUMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5423CC87D10024BA92 /* MUMath.swift */; };
+		F3D9CA7023CC87D10024BA92 /* MUColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5523CC87D10024BA92 /* MUColor.swift */; };
+		F3D9CA7123CC87D10024BA92 /* MUActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5623CC87D10024BA92 /* MUActivityIndicatorView.swift */; };
+		F3D9CA7223CC87D10024BA92 /* MUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5723CC87D10024BA92 /* MUViewController.swift */; };
+		F3D9CA7323CC87D10024BA92 /* MUProportionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5823CC87D10024BA92 /* MUProportionalView.swift */; };
+		F3D9CA7423CC87D10024BA92 /* MUImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5923CC87D10024BA92 /* MUImage.swift */; };
+		F3D9CA7523CC87D10024BA92 /* MUString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5A23CC87D10024BA92 /* MUString.swift */; };
+		F3D9CA7623CC87D10024BA92 /* MUNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5B23CC87D10024BA92 /* MUNibView.swift */; };
+		F3D9CA7723CC87D10024BA92 /* MULayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5C23CC87D10024BA92 /* MULayoutConstraint.swift */; };
+		F3D9CA7823CC87D10024BA92 /* MUMatrix+JacobiSVD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5E23CC87D10024BA92 /* MUMatrix+JacobiSVD.swift */; };
+		F3D9CA7923CC87D10024BA92 /* MUTransform3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5F23CC87D10024BA92 /* MUTransform3D.swift */; };
+		F3D9CA7A23CC87D10024BA92 /* MUQuad+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA6023CC87D10024BA92 /* MUQuad+UIView.swift */; };
+		F3D9CA7B23CC87D10024BA92 /* MUMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA6123CC87D10024BA92 /* MUMatrix.swift */; };
+		F3D9CA7C23CC87D10024BA92 /* MUQuad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA6223CC87D10024BA92 /* MUQuad.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		153484368F613B026F6BA0FC /* Pods-Neumann.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neumann.debug.xcconfig"; path = "Target Support Files/Pods-Neumann/Pods-Neumann.debug.xcconfig"; sourceTree = "<group>"; };
+		D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neumann.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7AB8FDB1C1D09344ECEC6B2 /* Pods-Neumann.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neumann.release.xcconfig"; path = "Target Support Files/Pods-Neumann/Pods-Neumann.release.xcconfig"; sourceTree = "<group>"; };
+		F3D9CA3723CC86220024BA92 /* Neumann.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Neumann.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D9CA3A23CC86220024BA92 /* Neumann.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Neumann.h; sourceTree = "<group>"; };
+		F3D9CA3B23CC86220024BA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D9CA4423CC87060024BA92 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		F3D9CA4523CC870D0024BA92 /* Neumann.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Neumann.podspec; sourceTree = "<group>"; };
+		F3D9CA4723CC87D10024BA92 /* MUView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MUView+Gradient.swift"; sourceTree = "<group>"; };
+		F3D9CA4823CC87D10024BA92 /* MUView+LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MUView+LayoutConstraint.swift"; sourceTree = "<group>"; };
+		F3D9CA4923CC87D10024BA92 /* MUView+Dash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MUView+Dash.swift"; sourceTree = "<group>"; };
+		F3D9CA4A23CC87D10024BA92 /* MUView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MUView+Autolayout.swift"; sourceTree = "<group>"; };
+		F3D9CA4B23CC87D10024BA92 /* MULayoutAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MULayoutAnchor.swift; sourceTree = "<group>"; };
+		F3D9CA4C23CC87D10024BA92 /* MUView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MUView+Layer.swift"; sourceTree = "<group>"; };
+		F3D9CA4D23CC87D10024BA92 /* MUAutolayoutPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUAutolayoutPosition.swift; sourceTree = "<group>"; };
+		F3D9CA4E23CC87D10024BA92 /* MUWeakProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUWeakProxy.swift; sourceTree = "<group>"; };
+		F3D9CA4F23CC87D10024BA92 /* MURange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MURange.swift; sourceTree = "<group>"; };
+		F3D9CA5123CC87D10024BA92 /* MUActivityIndicatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUActivityIndicatorProtocol.swift; sourceTree = "<group>"; };
+		F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUCornerStyle.swift; sourceTree = "<group>"; };
+		F3D9CA5323CC87D10024BA92 /* MUKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUKeyboard.swift; sourceTree = "<group>"; };
+		F3D9CA5423CC87D10024BA92 /* MUMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUMath.swift; sourceTree = "<group>"; };
+		F3D9CA5523CC87D10024BA92 /* MUColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUColor.swift; sourceTree = "<group>"; };
+		F3D9CA5623CC87D10024BA92 /* MUActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUActivityIndicatorView.swift; sourceTree = "<group>"; };
+		F3D9CA5723CC87D10024BA92 /* MUViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUViewController.swift; sourceTree = "<group>"; };
+		F3D9CA5823CC87D10024BA92 /* MUProportionalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUProportionalView.swift; sourceTree = "<group>"; };
+		F3D9CA5923CC87D10024BA92 /* MUImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUImage.swift; sourceTree = "<group>"; };
+		F3D9CA5A23CC87D10024BA92 /* MUString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUString.swift; sourceTree = "<group>"; };
+		F3D9CA5B23CC87D10024BA92 /* MUNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUNibView.swift; sourceTree = "<group>"; };
+		F3D9CA5C23CC87D10024BA92 /* MULayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MULayoutConstraint.swift; sourceTree = "<group>"; };
+		F3D9CA5E23CC87D10024BA92 /* MUMatrix+JacobiSVD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MUMatrix+JacobiSVD.swift"; sourceTree = "<group>"; };
+		F3D9CA5F23CC87D10024BA92 /* MUTransform3D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUTransform3D.swift; sourceTree = "<group>"; };
+		F3D9CA6023CC87D10024BA92 /* MUQuad+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MUQuad+UIView.swift"; sourceTree = "<group>"; };
+		F3D9CA6123CC87D10024BA92 /* MUMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUMatrix.swift; sourceTree = "<group>"; };
+		F3D9CA6223CC87D10024BA92 /* MUQuad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUQuad.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3D9CA3423CC86220024BA92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21C782D7FA7D03DC40A0D83 /* Pods_Neumann.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44D4D73185216C35916DEA1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77239614E90790FBACD8BC41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				153484368F613B026F6BA0FC /* Pods-Neumann.debug.xcconfig */,
+				D7AB8FDB1C1D09344ECEC6B2 /* Pods-Neumann.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3D9CA2D23CC86220024BA92 = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA4323CC86F20024BA92 /* Config */,
+				F3D9CA3923CC86220024BA92 /* Neumann */,
+				F3D9CA3823CC86220024BA92 /* Products */,
+				77239614E90790FBACD8BC41 /* Pods */,
+				44D4D73185216C35916DEA1D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3D9CA3823CC86220024BA92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA3723CC86220024BA92 /* Neumann.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3D9CA3923CC86220024BA92 /* Neumann */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA3A23CC86220024BA92 /* Neumann.h */,
+				F3D9CA3B23CC86220024BA92 /* Info.plist */,
+				F3D9CA4223CC86CC0024BA92 /* Sources */,
+			);
+			path = Neumann;
+			sourceTree = "<group>";
+		};
+		F3D9CA4223CC86CC0024BA92 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA5623CC87D10024BA92 /* MUActivityIndicatorView.swift */,
+				F3D9CA5523CC87D10024BA92 /* MUColor.swift */,
+				F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */,
+				F3D9CA5923CC87D10024BA92 /* MUImage.swift */,
+				F3D9CA5323CC87D10024BA92 /* MUKeyboard.swift */,
+				F3D9CA5C23CC87D10024BA92 /* MULayoutConstraint.swift */,
+				F3D9CA5423CC87D10024BA92 /* MUMath.swift */,
+				F3D9CA5B23CC87D10024BA92 /* MUNibView.swift */,
+				F3D9CA5823CC87D10024BA92 /* MUProportionalView.swift */,
+				F3D9CA4F23CC87D10024BA92 /* MURange.swift */,
+				F3D9CA5A23CC87D10024BA92 /* MUString.swift */,
+				F3D9CA5723CC87D10024BA92 /* MUViewController.swift */,
+				F3D9CA4E23CC87D10024BA92 /* MUWeakProxy.swift */,
+				F3D9CA5023CC87D10024BA92 /* Protocol */,
+				F3D9CA5D23CC87D10024BA92 /* Quad_Matrix */,
+				F3D9CA4623CC87D10024BA92 /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F3D9CA4323CC86F20024BA92 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA4423CC87060024BA92 /* Package.swift */,
+				F3D9CA4523CC870D0024BA92 /* Neumann.podspec */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		F3D9CA4623CC87D10024BA92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA4723CC87D10024BA92 /* MUView+Gradient.swift */,
+				F3D9CA4823CC87D10024BA92 /* MUView+LayoutConstraint.swift */,
+				F3D9CA4923CC87D10024BA92 /* MUView+Dash.swift */,
+				F3D9CA4A23CC87D10024BA92 /* MUView+Autolayout.swift */,
+				F3D9CA4B23CC87D10024BA92 /* MULayoutAnchor.swift */,
+				F3D9CA4C23CC87D10024BA92 /* MUView+Layer.swift */,
+				F3D9CA4D23CC87D10024BA92 /* MUAutolayoutPosition.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3D9CA5023CC87D10024BA92 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA5123CC87D10024BA92 /* MUActivityIndicatorProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F3D9CA5D23CC87D10024BA92 /* Quad_Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9CA5E23CC87D10024BA92 /* MUMatrix+JacobiSVD.swift */,
+				F3D9CA5F23CC87D10024BA92 /* MUTransform3D.swift */,
+				F3D9CA6023CC87D10024BA92 /* MUQuad+UIView.swift */,
+				F3D9CA6123CC87D10024BA92 /* MUMatrix.swift */,
+				F3D9CA6223CC87D10024BA92 /* MUQuad.swift */,
+			);
+			path = Quad_Matrix;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F3D9CA3223CC86220024BA92 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D9CA3C23CC86220024BA92 /* Neumann.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F3D9CA3623CC86220024BA92 /* Neumann */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D9CA3F23CC86220024BA92 /* Build configuration list for PBXNativeTarget "Neumann" */;
+			buildPhases = (
+				1E4C0711CFAD11482E675F9A /* [CP] Check Pods Manifest.lock */,
+				F3D9CA3223CC86220024BA92 /* Headers */,
+				F3D9CA3323CC86220024BA92 /* Sources */,
+				F3D9CA3423CC86220024BA92 /* Frameworks */,
+				F3D9CA3523CC86220024BA92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Neumann;
+			productName = Neumann;
+			productReference = F3D9CA3723CC86220024BA92 /* Neumann.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3D9CA2E23CC86220024BA92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Loïc GRIFFIE";
+				TargetAttributes = {
+					F3D9CA3623CC86220024BA92 = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = F3D9CA3123CC86220024BA92 /* Build configuration list for PBXProject "Neumann" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3D9CA2D23CC86220024BA92;
+			productRefGroup = F3D9CA3823CC86220024BA92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3D9CA3623CC86220024BA92 /* Neumann */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3D9CA3523CC86220024BA92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E4C0711CFAD11482E675F9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neumann-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3D9CA3323CC86220024BA92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D9CA7C23CC87D10024BA92 /* MUQuad.swift in Sources */,
+				F3D9CA7823CC87D10024BA92 /* MUMatrix+JacobiSVD.swift in Sources */,
+				F3D9CA6A23CC87D10024BA92 /* MUWeakProxy.swift in Sources */,
+				F3D9CA6B23CC87D10024BA92 /* MURange.swift in Sources */,
+				F3D9CA7223CC87D10024BA92 /* MUViewController.swift in Sources */,
+				F3D9CA7323CC87D10024BA92 /* MUProportionalView.swift in Sources */,
+				F3D9CA6E23CC87D10024BA92 /* MUKeyboard.swift in Sources */,
+				F3D9CA6D23CC87D10024BA92 /* MUCornerStyle.swift in Sources */,
+				F3D9CA6C23CC87D10024BA92 /* MUActivityIndicatorProtocol.swift in Sources */,
+				F3D9CA6823CC87D10024BA92 /* MUView+Layer.swift in Sources */,
+				F3D9CA7723CC87D10024BA92 /* MULayoutConstraint.swift in Sources */,
+				F3D9CA6523CC87D10024BA92 /* MUView+Dash.swift in Sources */,
+				F3D9CA7923CC87D10024BA92 /* MUTransform3D.swift in Sources */,
+				F3D9CA7023CC87D10024BA92 /* MUColor.swift in Sources */,
+				F3D9CA6723CC87D10024BA92 /* MULayoutAnchor.swift in Sources */,
+				F3D9CA6923CC87D10024BA92 /* MUAutolayoutPosition.swift in Sources */,
+				F3D9CA7A23CC87D10024BA92 /* MUQuad+UIView.swift in Sources */,
+				F3D9CA7523CC87D10024BA92 /* MUString.swift in Sources */,
+				F3D9CA7B23CC87D10024BA92 /* MUMatrix.swift in Sources */,
+				F3D9CA6F23CC87D10024BA92 /* MUMath.swift in Sources */,
+				F3D9CA7423CC87D10024BA92 /* MUImage.swift in Sources */,
+				F3D9CA6623CC87D10024BA92 /* MUView+Autolayout.swift in Sources */,
+				F3D9CA7623CC87D10024BA92 /* MUNibView.swift in Sources */,
+				F3D9CA7123CC87D10024BA92 /* MUActivityIndicatorView.swift in Sources */,
+				F3D9CA6323CC87D10024BA92 /* MUView+Gradient.swift in Sources */,
+				F3D9CA6423CC87D10024BA92 /* MUView+LayoutConstraint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F3D9CA3D23CC86220024BA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3D9CA3E23CC86220024BA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F3D9CA4023CC86220024BA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 153484368F613B026F6BA0FC /* Pods-Neumann.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S47LZ927R6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Neumann/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.surfin.Neumann;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3D9CA4123CC86220024BA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7AB8FDB1C1D09344ECEC6B2 /* Pods-Neumann.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S47LZ927R6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Neumann/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.surfin.Neumann;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3D9CA3123CC86220024BA92 /* Build configuration list for PBXProject "Neumann" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D9CA3D23CC86220024BA92 /* Debug */,
+				F3D9CA3E23CC86220024BA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D9CA3F23CC86220024BA92 /* Build configuration list for PBXNativeTarget "Neumann" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D9CA4023CC86220024BA92 /* Debug */,
+				F3D9CA4123CC86220024BA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3D9CA2E23CC86220024BA92 /* Project object */;
+}
