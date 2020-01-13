@@ -21,7 +21,6 @@
 		F3D9CA6B23CC87D10024BA92 /* MURange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4F23CC87D10024BA92 /* MURange.swift */; };
 		F3D9CA6C23CC87D10024BA92 /* MUActivityIndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5123CC87D10024BA92 /* MUActivityIndicatorProtocol.swift */; };
 		F3D9CA6D23CC87D10024BA92 /* MUCornerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */; };
-		F3D9CA6E23CC87D10024BA92 /* MUKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5323CC87D10024BA92 /* MUKeyboard.swift */; };
 		F3D9CA6F23CC87D10024BA92 /* MUMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5423CC87D10024BA92 /* MUMath.swift */; };
 		F3D9CA7023CC87D10024BA92 /* MUColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5523CC87D10024BA92 /* MUColor.swift */; };
 		F3D9CA7123CC87D10024BA92 /* MUActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5623CC87D10024BA92 /* MUActivityIndicatorView.swift */; };
@@ -76,7 +75,6 @@
 		F3D9CA4F23CC87D10024BA92 /* MURange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MURange.swift; sourceTree = "<group>"; };
 		F3D9CA5123CC87D10024BA92 /* MUActivityIndicatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUActivityIndicatorProtocol.swift; sourceTree = "<group>"; };
 		F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUCornerStyle.swift; sourceTree = "<group>"; };
-		F3D9CA5323CC87D10024BA92 /* MUKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUKeyboard.swift; sourceTree = "<group>"; };
 		F3D9CA5423CC87D10024BA92 /* MUMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUMath.swift; sourceTree = "<group>"; };
 		F3D9CA5523CC87D10024BA92 /* MUColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUColor.swift; sourceTree = "<group>"; };
 		F3D9CA5623CC87D10024BA92 /* MUActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				F3D9CA5523CC87D10024BA92 /* MUColor.swift */,
 				F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */,
 				F3D9CA5923CC87D10024BA92 /* MUImage.swift */,
-				F3D9CA5323CC87D10024BA92 /* MUKeyboard.swift */,
 				F3D9CA5C23CC87D10024BA92 /* MULayoutConstraint.swift */,
 				F3D9CA5423CC87D10024BA92 /* MUMath.swift */,
 				F3D9CA5B23CC87D10024BA92 /* MUNibView.swift */,
@@ -430,7 +427,6 @@
 				F3D9CA6B23CC87D10024BA92 /* MURange.swift in Sources */,
 				F3D9CA7223CC87D10024BA92 /* MUViewController.swift in Sources */,
 				F3D9CA7323CC87D10024BA92 /* MUProportionalView.swift in Sources */,
-				F3D9CA6E23CC87D10024BA92 /* MUKeyboard.swift in Sources */,
 				F3D9CA6D23CC87D10024BA92 /* MUCornerStyle.swift in Sources */,
 				F3D9CA6C23CC87D10024BA92 /* MUActivityIndicatorProtocol.swift in Sources */,
 				F3D9CA6823CC87D10024BA92 /* MUView+Layer.swift in Sources */,
@@ -614,7 +610,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.surfin.Neumann;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -643,7 +639,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.surfin.Neumann;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
