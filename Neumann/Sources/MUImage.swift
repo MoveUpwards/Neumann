@@ -23,16 +23,18 @@ extension UIImage {
      let image = UIImage(color: .red, borderColor: .blue, borderWidth: 1.0, size: bounds.size)
      ```
      */
-    convenience public init?(color: UIColor? = nil,
+    convenience public init?(icon: UIImage? = nil,
+                             padding: CGFloat = 0.0,
+                             color: UIColor? = nil,
                              borderColor: UIColor? = nil,
-                             borderWidth: CGFloat = 0,
-                             cornerRadius: CGFloat = 0,
-                             size: CGSize = CGSize(width: 1, height: 1)) {
+                             borderWidth: CGFloat = 0.0,
+                             cornerRadius: CGFloat = 0.0,
+                             size: CGSize = CGSize(width: 1.0, height: 1.0)) {
         // If nil color, cast to clear color
         let color = color ?? .clear
         let borderColor = borderColor ?? .clear
 
-        UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         defer {
             UIGraphicsEndImageContext()
         }
@@ -46,6 +48,12 @@ extension UIImage {
         view.layer.borderColor = borderColor.cgColor
         view.layer.borderWidth = borderWidth
         view.layer.cornerRadius = cornerRadius
+
+        if let icon = icon {
+            let image = UIImageView(image: icon)
+            image.frame = CGRect(origin: CGPoint(x: padding, y: padding), size: size - padding*2.0)
+            view.addSubview(image)
+        }
 
         view.layer.render(in: context)
 
@@ -79,6 +87,39 @@ extension UIImage {
 
             currentX += barWidth * 2.0
         }
+
+        guard let cgImage = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
+            return nil
+        }
+
+        self.init(cgImage: cgImage)
+    }
+
+    public convenience init?(text: String,
+                             font: UIFont = .systemFont(ofSize: 12.0),
+                             color: UIColor = .white) {
+        let label = UILabel()
+        label.text = text
+        label.font = font
+        label.textColor = color
+
+        let size = label.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: .greatestFiniteMagnitude))
+        label.frame = CGRect(origin: .zero, size: size)
+
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+
+        let view = UIView(frame: CGRect(origin: .zero, size: size))
+        view.backgroundColor = .clear
+        view.addSubview(label)
+
+        view.layer.render(in: context)
 
         guard let cgImage = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
             return nil
