@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8359440DDBA236E39D46EC04 /* Pods_NeumannTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF14ED964EAE83A810D6955 /* Pods_NeumannTests.framework */; };
-		B21C782D7FA7D03DC40A0D83 /* Pods_Neumann.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */; };
+		0422D4AA25470DE90054EE36 /* MUSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422D4A925470DE90054EE36 /* MUSize.swift */; };
 		F3D9CA3C23CC86220024BA92 /* Neumann.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D9CA3A23CC86220024BA92 /* Neumann.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3D9CA6323CC87D10024BA92 /* MUView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4723CC87D10024BA92 /* MUView+Gradient.swift */; };
 		F3D9CA6423CC87D10024BA92 /* MUView+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4823CC87D10024BA92 /* MUView+LayoutConstraint.swift */; };
@@ -53,12 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		153484368F613B026F6BA0FC /* Pods-Neumann.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neumann.debug.xcconfig"; path = "Target Support Files/Pods-Neumann/Pods-Neumann.debug.xcconfig"; sourceTree = "<group>"; };
-		B5FA204DCA0774634AC348F2 /* Pods-NeumannTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeumannTests.release.xcconfig"; path = "Target Support Files/Pods-NeumannTests/Pods-NeumannTests.release.xcconfig"; sourceTree = "<group>"; };
-		D278D92DFC9B032D9B21D122 /* Pods-NeumannTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeumannTests.debug.xcconfig"; path = "Target Support Files/Pods-NeumannTests/Pods-NeumannTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neumann.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7AB8FDB1C1D09344ECEC6B2 /* Pods-Neumann.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neumann.release.xcconfig"; path = "Target Support Files/Pods-Neumann/Pods-Neumann.release.xcconfig"; sourceTree = "<group>"; };
-		ECF14ED964EAE83A810D6955 /* Pods_NeumannTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeumannTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0422D4A925470DE90054EE36 /* MUSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUSize.swift; sourceTree = "<group>"; };
+		04F90FB62547088A00E648D9 /* SingleViewPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingleViewPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F3D9CA3723CC86220024BA92 /* Neumann.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Neumann.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D9CA3A23CC86220024BA92 /* Neumann.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Neumann.h; sourceTree = "<group>"; };
 		F3D9CA3B23CC86220024BA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B21C782D7FA7D03DC40A0D83 /* Pods_Neumann.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,42 +105,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D9CA8623CC88690024BA92 /* Neumann.framework in Frameworks */,
-				8359440DDBA236E39D46EC04 /* Pods_NeumannTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44D4D73185216C35916DEA1D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D45E5F7BFD25AAFA9444FC09 /* Pods_Neumann.framework */,
-				ECF14ED964EAE83A810D6955 /* Pods_NeumannTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		77239614E90790FBACD8BC41 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				153484368F613B026F6BA0FC /* Pods-Neumann.debug.xcconfig */,
-				D7AB8FDB1C1D09344ECEC6B2 /* Pods-Neumann.release.xcconfig */,
-				D278D92DFC9B032D9B21D122 /* Pods-NeumannTests.debug.xcconfig */,
-				B5FA204DCA0774634AC348F2 /* Pods-NeumannTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		F3D9CA2D23CC86220024BA92 = {
 			isa = PBXGroup;
 			children = (
+				04F90FB62547088A00E648D9 /* SingleViewPlayground.playground */,
 				F3D9CA4323CC86F20024BA92 /* Config */,
 				F3D9CA3923CC86220024BA92 /* Neumann */,
 				F3D9CA8223CC88690024BA92 /* NeumannTests */,
 				F3D9CA3823CC86220024BA92 /* Products */,
-				77239614E90790FBACD8BC41 /* Pods */,
-				44D4D73185216C35916DEA1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +153,7 @@
 				F3D9CA5B23CC87D10024BA92 /* MUNibView.swift */,
 				F3D9CA5823CC87D10024BA92 /* MUProportionalView.swift */,
 				F3D9CA4F23CC87D10024BA92 /* MURange.swift */,
+				0422D4A925470DE90054EE36 /* MUSize.swift */,
 				F3D9CA5A23CC87D10024BA92 /* MUString.swift */,
 				F3D9CA5723CC87D10024BA92 /* MUViewController.swift */,
 				F3D9CA4E23CC87D10024BA92 /* MUWeakProxy.swift */,
@@ -280,7 +253,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3D9CA3F23CC86220024BA92 /* Build configuration list for PBXNativeTarget "Neumann" */;
 			buildPhases = (
-				1E4C0711CFAD11482E675F9A /* [CP] Check Pods Manifest.lock */,
 				F3D9CA3223CC86220024BA92 /* Headers */,
 				F3D9CA3323CC86220024BA92 /* Sources */,
 				F3D9CA3423CC86220024BA92 /* Frameworks */,
@@ -299,7 +271,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3D9CA8923CC88690024BA92 /* Build configuration list for PBXNativeTarget "NeumannTests" */;
 			buildPhases = (
-				6BFFFAC926E5CCEB4C819EC9 /* [CP] Check Pods Manifest.lock */,
 				F3D9CA7D23CC88690024BA92 /* Sources */,
 				F3D9CA7E23CC88690024BA92 /* Frameworks */,
 				F3D9CA7F23CC88690024BA92 /* Resources */,
@@ -369,53 +340,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1E4C0711CFAD11482E675F9A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Neumann-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6BFFFAC926E5CCEB4C819EC9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NeumannTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		F3D9CA3323CC86220024BA92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -437,6 +361,7 @@
 				F3D9CA6723CC87D10024BA92 /* MULayoutAnchor.swift in Sources */,
 				F3D9CA6923CC87D10024BA92 /* MUAutolayoutPosition.swift in Sources */,
 				F3D9CA7A23CC87D10024BA92 /* MUQuad+UIView.swift in Sources */,
+				0422D4AA25470DE90054EE36 /* MUSize.swift in Sources */,
 				F3D9CA7523CC87D10024BA92 /* MUString.swift in Sources */,
 				F3D9CA7B23CC87D10024BA92 /* MUMatrix.swift in Sources */,
 				F3D9CA6F23CC87D10024BA92 /* MUMath.swift in Sources */,
@@ -593,7 +518,6 @@
 		};
 		F3D9CA4023CC86220024BA92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 153484368F613B026F6BA0FC /* Pods-Neumann.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,7 +546,6 @@
 		};
 		F3D9CA4123CC86220024BA92 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7AB8FDB1C1D09344ECEC6B2 /* Pods-Neumann.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,7 +573,6 @@
 		};
 		F3D9CA8A23CC88690024BA92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D278D92DFC9B032D9B21D122 /* Pods-NeumannTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47LZ927R6;
@@ -669,7 +591,6 @@
 		};
 		F3D9CA8B23CC88690024BA92 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5FA204DCA0774634AC348F2 /* Pods-NeumannTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47LZ927R6;
