@@ -8,28 +8,35 @@
 
 import UIKit.UIColor
 
-extension UIColor {
-
-    /// Return the red component of the UIColor
+extension CGColor {
+    /// Return the red component of the CGColor
     internal var r: CGFloat {
-        return cgColor.components?[0] ?? 0.0
+        return components?[0] ?? 0.0
     }
 
-    /// Return the green component of the UIColor
+    /// Return the green component of the CGColor
     internal var g: CGFloat {
-        return cgColor.components?[cgColor.numberOfComponents == 2 ? 0 : 1] ?? 0.0
+        return components?[numberOfComponents == 2 ? 0 : 1] ?? 0.0
     }
 
-    /// Return the blue component of the UIColor
+    /// Return the blue component of the CGColor
     internal var b: CGFloat {
-        return cgColor.components?[cgColor.numberOfComponents == 2 ? 0 : 2] ?? 0.0
+        return components?[numberOfComponents == 2 ? 0 : 2] ?? 0.0
     }
 
-    /// Return the alpha component of the UIColor
+    /// Return the alpha component of the CGColor
     internal var a: CGFloat {
-        return cgColor.components?[cgColor.numberOfComponents == 2 ? 1 : 3] ?? 0.0
+        return components?[numberOfComponents == 2 ? 1 : 3] ?? 0.0
     }
 
+    /// Return the hexInt of the CGColor
+    public var hex: Int { return Int(r * 255.0) << 16 + Int(g * 255.0) << 8 + Int(b * 255.0) }
+
+    /// Retrun the ARGB int of the CGColor
+    public var argb: Int { return Int(a) << 24 + hex }
+}
+
+extension UIColor {
     /**
      Interpolate a fraction between the current color and a second one
 
@@ -39,10 +46,10 @@ extension UIColor {
      */
     public func interpolate(to: UIColor, fraction: CGFloat) -> UIColor? {
         let f = min(max(0, fraction), 1) // Ensure that fraction is between 0 and 1
-        return UIColor(red: r + (to.r - r) * f,
-                       green: g + (to.g - g) * f,
-                       blue: b + (to.b - b) * f,
-                       alpha: a + (to.a - a) * f)
+        return UIColor(red: cgColor.r + (to.cgColor.r - cgColor.r) * f,
+                       green: cgColor.g + (to.cgColor.g - cgColor.g) * f,
+                       blue: cgColor.b + (to.cgColor.b - cgColor.b) * f,
+                       alpha: cgColor.a + (to.cgColor.a - cgColor.a) * f)
     }
 
     /**
@@ -61,8 +68,4 @@ extension UIColor {
                   blue: CGFloat(hex & 0xff) / 255.0,
                   alpha: CGFloat(alpha & 0xff) / 255.0)
     }
-
-
-    public var hex: Int { return Int(r * 255.0) << 16 + Int(g * 255.0) << 8 + Int(b * 255.0) }
-    public var argb: Int { return Int(a) << 24 + hex }
 }

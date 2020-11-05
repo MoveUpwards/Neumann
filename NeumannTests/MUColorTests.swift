@@ -14,10 +14,10 @@ class MUColorTests: XCTestCase {
     func testColorComponents() {
         let color = UIColor(red: 0.123, green: 0.987, blue: 0.456, alpha: 0.479)
 
-        XCTAssertEqual(color.r, 0.123)
-        XCTAssertEqual(color.g, 0.987)
-        XCTAssertEqual(color.b, 0.456)
-        XCTAssertEqual(color.a, 0.479)
+        XCTAssertEqual(color.cgColor.r, 0.123)
+        XCTAssertEqual(color.cgColor.g, 0.987)
+        XCTAssertEqual(color.cgColor.b, 0.456)
+        XCTAssertEqual(color.cgColor.a, 0.479)
     }
 
     func testHexInit() {
@@ -31,16 +31,16 @@ class MUColorTests: XCTestCase {
         let color = UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
 
         XCTAssertEqual(color, colorHex)
-        XCTAssertEqual(hex, color.hex)
-        XCTAssertEqual(color.argb, Int(1) << 24 + hex)
+        XCTAssertEqual(hex, color.cgColor.hex)
+        XCTAssertEqual(color.cgColor.argb, Int(1) << 24 + hex)
 
 
         let colorAlphaHex = UIColor(hex: hex, alpha: Int(a))
         let colorAlpha = UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a / 255.0)
 
         XCTAssertEqual(colorAlpha, colorAlphaHex)
-        XCTAssertEqual(hex, colorAlpha.hex)
-        XCTAssertEqual(colorAlpha.argb, Int(a / 255.0) << 24 + hex)
+        XCTAssertEqual(hex, colorAlpha.cgColor.hex)
+        XCTAssertEqual(colorAlpha.cgColor.argb, Int(a / 255.0) << 24 + hex)
 
         let wrongColor = UIColor(hex: 0x123456)
 
