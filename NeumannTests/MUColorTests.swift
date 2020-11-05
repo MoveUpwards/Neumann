@@ -31,11 +31,16 @@ class MUColorTests: XCTestCase {
         let color = UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
 
         XCTAssertEqual(color, colorHex)
+        XCTAssertEqual(hex, color.hex)
+        XCTAssertEqual(color.argb, Int(1) << 24 + hex)
+
 
         let colorAlphaHex = UIColor(hex: hex, alpha: Int(a))
         let colorAlpha = UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a / 255.0)
 
         XCTAssertEqual(colorAlpha, colorAlphaHex)
+        XCTAssertEqual(hex, colorAlpha.hex)
+        XCTAssertEqual(colorAlpha.argb, Int(a / 255.0) << 24 + hex)
 
         let wrongColor = UIColor(hex: 0x123456)
 

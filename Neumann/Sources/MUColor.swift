@@ -61,4 +61,8 @@ extension UIColor {
                   blue: CGFloat(hex & 0xff) / 255.0,
                   alpha: CGFloat(alpha & 0xff) / 255.0)
     }
+
+
+    public var hex: Int { return Int(r * 255.0) << 16 + Int(g * 255.0) << 8 + Int(b * 255.0) }
+    public var argb: Int { return Int(a) << 24 + hex }
 }
