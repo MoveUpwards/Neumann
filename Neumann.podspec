@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Neumann'
-  s.version = '1.5.0'
+  s.version = '2.0.1'
   s.license = 'MIT'
   s.summary = 'Neumann is a framework that expose reusable components.'
   s.description  = <<-DESC
