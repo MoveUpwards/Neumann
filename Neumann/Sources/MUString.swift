@@ -10,7 +10,7 @@ import UIKit
 
 extension String {
     /// Return a random String of expected length
-    static func random(length: Int) -> String {
+    static public func random(length: Int) -> String {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         var randomString = ""
         while randomString.utf8.count < length {
