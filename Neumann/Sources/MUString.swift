@@ -9,6 +9,17 @@
 import UIKit
 
 extension String {
+    /// Return a random String of expected length
+    static func random(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        var randomString = ""
+        while randomString.utf8.count < length {
+            let randomLetter = letters.randomElement()
+            randomString += randomLetter?.description ?? ""
+        }
+        return randomString
+    }
+
     /// Check if string is valid with given regex
     public func isValidRegex(_ regex: String) -> Bool {
         return !isEmpty && range(of: regex, options: .regularExpression) != nil
