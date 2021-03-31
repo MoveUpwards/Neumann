@@ -6,7 +6,9 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
-import UIKit
+#if canImport(CoreGraphics)
+
+import CoreGraphics
 
 /// Progress bar style representation
 public enum MUCornerStyle: Equatable {
@@ -17,3 +19,5 @@ public enum MUCornerStyle: Equatable {
     /// Custom corner radius
     case custom(_ radius: CGFloat)
 }
+
+#endif

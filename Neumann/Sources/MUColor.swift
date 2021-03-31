@@ -6,7 +6,9 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
-import UIKit.UIColor
+#if canImport(CoreGraphics)
+
+import CoreGraphics
 
 extension CGColor {
     /// Return the red component of the CGColor
@@ -35,6 +37,12 @@ extension CGColor {
     /// Retrun the ARGB int of the CGColor
     public var argb: Int { return Int(a) << 24 + hex }
 }
+
+#endif
+
+#if canImport(UIKit)
+
+import UIKit.UIColor
 
 extension UIColor {
     /**
@@ -69,3 +77,5 @@ extension UIColor {
                   alpha: CGFloat(alpha & 0xff) / 255.0)
     }
 }
+
+#endif

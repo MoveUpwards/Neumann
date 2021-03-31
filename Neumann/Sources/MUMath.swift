@@ -6,8 +6,6 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
-import UIKit
-
 /// FloatingPoint protocol
 public protocol MUFloatingPoint: FloatingPoint {
     /// A very close to 0 number
@@ -32,6 +30,10 @@ extension FloatingPoint {
     }
 }
 
+#if canImport(CoreGraphics)
+
+import CoreGraphics
+
 extension CGFloat: MUFloatingPoint {
     /// A very close to 0 number
     public static let epsilon: CGFloat = 8.85418782e-12
@@ -41,6 +43,8 @@ extension CGFloat: MUFloatingPoint {
         return hypot(lhs, rhs)
     }
 }
+
+#endif
 
 extension Double: MUFloatingPoint {
     /// A very close to 0 number

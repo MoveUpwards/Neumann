@@ -6,6 +6,8 @@
 //  Copyright © 2019 Damien Noël Dubuisson. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit.UIView
 
 extension UIView {
@@ -33,3 +35,5 @@ extension UIView {
         layer.addSublayer(shapeLayer)
     }
 }
+
+#endif

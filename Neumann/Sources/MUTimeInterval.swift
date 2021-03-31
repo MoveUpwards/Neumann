@@ -5,6 +5,8 @@
 //  Created by Damien Noël Dubuisson on 10/03/2021.
 //
 
+#if canImport(Foundation)
+
 import Foundation
 
 extension TimeInterval {
@@ -33,3 +35,5 @@ extension TimeInterval {
         return "\(hours)h\(minutes.twoDigit)m"
     }
 }
+
+#endif

@@ -8,7 +8,9 @@
 //  https://en.wikipedia.org/wiki/Quadrilateral
 //
 
-import UIKit
+#if canImport(CoreGraphics)
+
+import CoreGraphics
 
 /// A Quadrilateral
 public struct MUQuad {
@@ -96,3 +98,5 @@ public struct MUQuad {
                       bottomRight: CGPoint(x: lhs.bottomRight.x / rhs.x, y: lhs.bottomRight.y / rhs.y))
     }
 }
+
+#endif

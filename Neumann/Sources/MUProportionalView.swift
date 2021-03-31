@@ -6,6 +6,8 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 /// Class that act like with dynamic size.
@@ -30,3 +32,5 @@ open class MUProportionalView: UIView {
         return CGSize(width: width, height: height)
     }
 }
+
+#endif

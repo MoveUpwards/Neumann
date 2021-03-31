@@ -6,6 +6,8 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit.NSLayoutAnchor
 
 extension NSLayoutXAxisAnchor {
@@ -28,3 +30,5 @@ extension NSLayoutDimension {
         constraint(equalTo: anchor, multiplier: multiplier).isActive = true
     }
 }
+
+#endif
