@@ -6,6 +6,8 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit.UIView
 
 extension UIView {
@@ -32,3 +34,5 @@ extension UIView {
         layer.maskedCorners = CACornerMask(rawValue: corners.rawValue)
     }
 }
+
+#endif

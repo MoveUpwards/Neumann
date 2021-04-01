@@ -6,6 +6,8 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 extension UIImage {
@@ -128,3 +130,5 @@ extension UIImage {
         self.init(cgImage: cgImage)
     }
 }
+
+#endif

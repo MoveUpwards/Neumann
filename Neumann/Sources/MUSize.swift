@@ -6,10 +6,14 @@
 //  Copyright © 2020 Loïc GRIFFIE. All rights reserved.
 //
 
-import UIKit
+#if canImport(CoreGraphics)
+
+import CoreGraphics
 
 extension CGSize {
     public static func - (lhs: CGSize, rhs: CGFloat) -> CGSize {
         return CGSize(width: lhs.width - rhs, height: lhs.height - rhs)
     }
 }
+
+#endif

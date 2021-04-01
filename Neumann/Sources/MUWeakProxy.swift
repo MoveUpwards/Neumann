@@ -6,6 +6,8 @@
 //  Copyright © 2018 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(Foundation)
+
 import Foundation
 
 public protocol Weakable: class {
@@ -26,3 +28,5 @@ final public class MUWeakProxy {
         target?.updateIfNeeded()
     }
 }
+
+#endif

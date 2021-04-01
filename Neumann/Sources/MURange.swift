@@ -6,8 +6,6 @@
 //  Copyright © 2018 Loïc GRIFFIE. All rights reserved.
 //
 
-import Foundation
-
 /// Class that act like NSRange and Range merged.
 public struct MURange<Bound: Numeric> {
     /// NSRange location equivalent

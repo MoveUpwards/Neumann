@@ -6,6 +6,8 @@
 //  Copyright © 2018 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(Foundation)
+
 import Foundation
 
 extension MUMatrix {
@@ -181,3 +183,5 @@ extension MUMatrix {
         }
     }
 }
+
+#endif

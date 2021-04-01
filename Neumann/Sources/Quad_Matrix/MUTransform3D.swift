@@ -6,7 +6,9 @@
 //  Copyright © 2018 Loïc GRIFFIE. All rights reserved.
 //
 
-import UIKit
+#if canImport(CoreAnimation)
+
+import CoreAnimation
 
 extension CATransform3D {
     // See: https://github.com/joshrl/FreeTransform/blob/master/FreeTransform/UIView%2BQuadrilateral.m
@@ -125,3 +127,5 @@ extension CATransform3D {
         return (matrixA, matrixB)
     }
 }
+
+#endif

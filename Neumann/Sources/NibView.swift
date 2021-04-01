@@ -6,6 +6,8 @@
 //  Copyright © 2019 Damien Noël Dubuisson. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 /// An object that manages the content for a rectangular area on the screen from a xib file.
@@ -61,3 +63,5 @@ open class NibView: UIView {
         return nibView
     }
 }
+
+#endif

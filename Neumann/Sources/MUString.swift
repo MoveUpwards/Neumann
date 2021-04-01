@@ -6,7 +6,9 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
-import UIKit
+#if canImport(Foundation)
+
+import Foundation
 
 extension String {
     /// Return a random String of expected length
@@ -40,18 +42,6 @@ extension String {
         return CharacterSet.alphanumerics.isSuperset(of: CharacterSet(charactersIn: self))
     }
 
-    /// Returns bounding box size for a given font
-    public func constrainedSize(width: CGFloat = .greatestFiniteMagnitude,
-                                  height: CGFloat = .greatestFiniteMagnitude,
-                                  font: UIFont) -> CGSize {
-        let rect = CGSize(width: width, height: height)
-        return self.boundingRect(with: rect,
-                                 options: .usesLineFragmentOrigin,
-                                 attributes: [.font: font],
-                                 context: nil).size
-    }
-
-    #if canImport(Foundation)
     /// Sejima: Returns a localized string, with an optional comment for translators.
     ///
     ///        "Hello world".localized -> Bonjour le monde
@@ -59,9 +49,7 @@ extension String {
     public func localized(comment: String = "") -> String {
         return NSLocalizedString(self, comment: comment)
     }
-    #endif
 
-    #if canImport(Foundation)
     /// Sejima: Check if string is valid email format.
     ///
     /// - Note: Note that this property does not validate the email address against an email server.
@@ -79,5 +67,26 @@ extension String {
         let regex = ".*@.*\\..{2,64}"
         return range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
     }
-    #endif
 }
+
+#endif
+
+#if canImport(CoreGraphics) && canImport(UIKit)
+
+import CoreGraphics
+import UIKit.UIFont
+
+extension String {
+    /// Returns bounding box size for a given font
+    public func constrainedSize(width: CGFloat = .greatestFiniteMagnitude,
+                                height: CGFloat = .greatestFiniteMagnitude,
+                                font: UIFont) -> CGSize {
+        let rect = CGSize(width: width, height: height)
+        return self.boundingRect(with: rect,
+                                 options: .usesLineFragmentOrigin,
+                                 attributes: [.font: font],
+                                 context: nil).size
+    }
+}
+
+#endif

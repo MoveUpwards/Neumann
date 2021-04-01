@@ -6,6 +6,8 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 extension NSLayoutConstraint {
@@ -65,3 +67,5 @@ extension NSLayoutConstraint {
         return newConstraint
     }
 }
+
+#endif
