@@ -6,9 +6,9 @@
 //  Copyright © 2018 Loïc GRIFFIE. All rights reserved.
 //
 
-#if canImport(CoreAnimation)
+#if canImport(QuartzCore)
 
-import CoreAnimation
+import QuartzCore
 
 extension CATransform3D {
     // See: https://github.com/joshrl/FreeTransform/blob/master/FreeTransform/UIView%2BQuadrilateral.m

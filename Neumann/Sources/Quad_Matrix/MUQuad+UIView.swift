@@ -6,10 +6,9 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
-#if canImport(UIKit) && canImport(CoreAnimation)
+#if canImport(UIKit)
 
 import UIKit.UIView
-import CoreAnimation
 
 extension UIView {
     /// Transform view to fit givent Quad.
