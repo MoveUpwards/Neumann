@@ -117,10 +117,6 @@ public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
     }
 
     public var cofactor: MUMatrix {
-        let test = [["test", "one"], ["second", 2]]
-        test.enumerated().forEach { element in
-            print(element.offset)
-        }
         return map { row, col, _ in
             var subMatrix = self
             subMatrix.removeRow(row)
