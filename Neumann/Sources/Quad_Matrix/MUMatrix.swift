@@ -22,10 +22,14 @@ public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
     }
 
     /// Initialize a matrix with a single value repeated on each rows and columns.
-    public init(rows: Int, columns: Int, repeatedValue: T) {
+    public init(rows: Int, columns: Int, repeatedValue: T = .zero) {
         datas = [[T]](repeating: [T](repeating: repeatedValue, count: columns), count: rows)
         rowsCount = rows
         columnsCount = columns
+    }
+
+    public static func identity(for count: Int) -> MUMatrix<T> {
+        return MUMatrix(rows: count, columns: count).map { r, c, _ in r == c ? 1 : 0 }
     }
 
     /// Accesses the element at the specified position.
@@ -57,8 +61,30 @@ public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
         return datas.map { $0[index] }
     }
 
+    /// Will map all datas in the matrix
+    public func map(_ transform: (_ row: Int, _ col: Int, _ value: T) -> T) -> MUMatrix {
+        var mapped = self
+        rows().enumerated().forEach { rowOffset, rowValue in
+            rowValue.enumerated().forEach { columnOffset, value in
+                mapped[rowOffset, columnOffset] = transform(rowOffset, columnOffset, value)
+            }
+        }
+        return mapped
+    }
+
+    /// Will export all datas in the matrix
+    public func enumerated() -> [(row: Int, col: Int, value: T)] {
+        var enumerated = [(row: Int, col: Int, value: T)]()
+        rows().enumerated().forEach { rowOffset, row in
+            row.enumerated().forEach { columnOffset, value in
+                enumerated.append((rowOffset, columnOffset, value))
+            }
+        }
+        return enumerated
+    }
+
     /// Flips the matrix over its diagonal.
-    public func transpose() -> MUMatrix {
+    public var transpose: MUMatrix {
         var transposed = MUMatrix()
         transposed.rowsCount = columnsCount
         transposed.columnsCount = rowsCount
@@ -66,9 +92,43 @@ public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
         return transposed
     }
 
+    public var inverse: MUMatrix {
+        return cofactor.transpose * (T(1) / determinant)
+    }
+
+    public var determinant: T {
+        guard rowsCount == columnsCount else { return .zero } // No determinant for non-square matrix
+        guard rowsCount > 0 else { return .zero } // No determinant for empty matrix
+        guard rowsCount > 1 else { return self[0, 0] }
+
+        var sum = T.zero
+        var multiplier = T(1)
+        let topRow = row(0)
+
+        for (column, num) in topRow.enumerated() {
+            var subMatrix = self
+            subMatrix.removeRow(0)
+            subMatrix.removeColumn(column)
+            sum += num * multiplier * subMatrix.determinant // Recursive call
+            multiplier *= T(-1)
+        }
+
+        return sum
+    }
+
+    public var cofactor: MUMatrix {
+        return map { row, col, _ in
+            var subMatrix = self
+            subMatrix.removeRow(row)
+            subMatrix.removeColumn(col)
+
+            return subMatrix.determinant * T((row+col) % 2 == 0 ? 1 : -1)
+        }
+    }
+
     /// Resize the matrix and crop values if new matrix is smaller or add 0 if new matrix is bigger.
     public func resize(row: Int, column: Int) -> MUMatrix {
-        var resultMatrix = MUMatrix(rows: row, columns: column, repeatedValue: T(0))
+        var resultMatrix = MUMatrix(rows: row, columns: column)
         var flatDatas = datas.flatMap { $0 }
 
         for rowIndex in (0 ..< row) {
@@ -91,7 +151,7 @@ public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
                                             vMatrix: MUMatrix?,
                                             bMatrix: MUMatrix?) -> MUMatrix {
         let bCols = bMatrix?.columnsCount ?? column
-        var xMatrix = MUMatrix(rows: row, columns: bCols, repeatedValue: T(0))
+        var xMatrix = MUMatrix(rows: row, columns: bCols)
         var threshold: T = 0
 
         // Calculate threshold
@@ -125,7 +185,7 @@ public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
                     }
                 }
             } else {
-                var bufferMatrix = MUMatrix(rows: 1, columns: bCols, repeatedValue: T(0))
+                var bufferMatrix = MUMatrix(rows: 1, columns: bCols)
                 if let bMatrix = bMatrix {
                     matrixAXPY(row: column, column: bCols, aMatrix: bMatrix, yMatrix: &bufferMatrix)
 
@@ -246,6 +306,26 @@ public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
         return self
     }
 
+    /// Remove the row at selected index.
+    @discardableResult
+    public mutating func removeRow(_ index: Int) -> MUMatrix {
+        checkRow(index)
+        rowsCount -= 1
+        datas.remove(at: index)
+        return self
+    }
+
+    /// Remove the column at selected index.
+    @discardableResult
+    public mutating func removeColumn(_ index: Int) -> MUMatrix {
+        checkColumn(index)
+        columnsCount -= 1
+        (0 ..< rowsCount).forEach { i in
+            datas[i].remove(at: index)
+        }
+        return self
+    }
+
     /// Perform a rotation in Euclidean space.
     public mutating func rotate(firstRow: Int, secondRow: Int, cosine: T, sine: T) {
         (0 ..< columnsCount).forEach { index in
@@ -261,6 +341,37 @@ public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
         let temp = self[first.row, first.column]
         self[first.row, first.column] = self[second.row, second.column]
         self[second.row, second.column] = temp
+    }
+}
+
+infix operator • : MultiplicationPrecedence // Alt + @ on Mac
+
+extension MUMatrix: Equatable {}
+
+extension MUMatrix {
+    public static func *(_ matrix: MUMatrix, _ scalar: T) -> MUMatrix {
+        return matrix.map { $2 * scalar}
+    }
+
+    public static func *(_ scalar: T, _ matrix: MUMatrix) -> MUMatrix {
+        return matrix.map { $2 * scalar}
+    }
+
+    public static func •(_ left: MUMatrix, _ right: MUMatrix) -> MUMatrix { left.dot(right) }
+
+    private func dot(_ matrix: MUMatrix) -> MUMatrix {
+        precondition(columnsCount == matrix.rowsCount, "Incombatible dimensions for dot function")
+        var result = MUMatrix(rows: rowsCount, columns: matrix.columnsCount)
+
+        for row in 0..<rowsCount {
+            for col in 0..<matrix.columnsCount {
+                for i in 0..<columnsCount {
+                    result[row, col] += self[row, i] * matrix[i, col]
+                }
+            }
+        }
+
+        return result
     }
 }
 

@@ -39,8 +39,8 @@ class MUCoreTests: XCTestCase {
     }
 }
 
-internal class FakeView: MUNibView {
-}
+//internal class FakeView: MUNibView {
+//}
 
 internal class FakeProxy: Weakable {
     func updateIfNeeded() { }

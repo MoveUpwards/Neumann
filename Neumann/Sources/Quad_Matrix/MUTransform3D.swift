@@ -60,14 +60,14 @@ extension CATransform3D {
         (matrixA, matrixB) = CATransform3D.perspectiveMatrices(from: quad, to: destinationQuad)
 
         // Solve for the two matrices
-        matrixA = matrixA.transpose()
+        matrixA = matrixA.transpose
 
-        var matrixV: MUMatrix? = MUMatrix(rows: matrixA.rowsCount, columns: matrixA.rowsCount, repeatedValue: CGFloat())
+        var matrixV: MUMatrix? = MUMatrix<CGFloat>(rows: matrixA.rowsCount, columns: matrixA.rowsCount)
         let matrixW = matrixA.jacobiSVD(&matrixV)
         let matrixX = matrixA.singleValueBackSubstitution(row: matrixA.rowsCount, column: matrixA.columnsCount,
                                                           wMatrix: matrixW, vMatrix: matrixV, bMatrix: matrixB)
 
-        var perspectiveMatrix = matrixX.resize(row: 3, column: 3).transpose()
+        var perspectiveMatrix = matrixX.resize(row: 3, column: 3).transpose
         perspectiveMatrix.insertColumn(2, value: 0)
         perspectiveMatrix.insertRow(2, value: 0)
         perspectiveMatrix[2, 2] = 1
@@ -94,8 +94,8 @@ extension CATransform3D {
     private static func perspectiveMatrices(from quad: MUQuad,
                                             to destinationQuad: MUQuad) -> (MUMatrix<CGFloat>, MUMatrix<CGFloat>) {
         // Calculate the two required matrices
-        var matrixA = MUMatrix(rows: 8, columns: 8, repeatedValue: CGFloat())
-        var matrixB = MUMatrix(rows: 8, columns: 1, repeatedValue: CGFloat())
+        var matrixA = MUMatrix<CGFloat>(rows: 8, columns: 8)
+        var matrixB = MUMatrix<CGFloat>(rows: 8, columns: 1)
 
         (0 ..< 4).forEach { i in
             let source = quad.point(i)

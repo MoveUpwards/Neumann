@@ -20,7 +20,7 @@ extension MUMatrix {
     /// Jacobi Singular Value Decomposition
     public mutating func jacobiSVD(_ matrixV: inout MUMatrix?, n: Int = -1) -> MUMatrix {
         // Calculate Matrix W
-        var matrixW = MUMatrix(rows: rowsCount, columns: 1, repeatedValue: T(0))
+        var matrixW = MUMatrix(rows: rowsCount, columns: 1)
         datas.enumerated().forEach { index, row in
             var combinedRow: T = 0
 
