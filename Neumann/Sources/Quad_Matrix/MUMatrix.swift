@@ -7,7 +7,7 @@
 //
 
 /// MUMatrix struct of floating point elements
-public struct MUMatrix<T: MUFloatingPoint & CustomStringConvertible> {
+public struct MUMatrix<T: MUFloatingPoint> {
     /// 2D array of matrix datas.
     public private(set) var datas: [[T]]
     /// Number of rows.
@@ -381,7 +381,7 @@ extension MUMatrix: CustomStringConvertible {
         var text = "[\n"
         (0 ..< rowsCount).forEach { row in
             (0 ..< columnsCount).forEach { column in
-                text += String(datas[row][column].description) + " "
+                text += "\(datas[row][column]) "
             }
             text += "\n"
         }

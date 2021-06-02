@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import simd
 @testable import Neumann
 
 class MUMatrixTests: XCTestCase {
@@ -113,6 +114,16 @@ class MUMatrixTests: XCTestCase {
 
         let h = MUMatrix(arrayLiteral: [3, 6, 1, 3], [2, 3, 4, 8], [1, 3, 5, -7], [-10, 5, -1, 2])
         XCTAssertEqual(h.determinant, -4402)
+
+        let i = MUMatrix<Double>.identity(for: 4)
+        XCTAssertEqual(i.determinant, 1.0)
+
+        let aa = MUMatrix(arrayLiteral: [1, 2], [3, 4], [5, 6])
+        XCTAssertEqual(aa.determinant, aa.transpose.determinant)
+
+        let simMat = simd_double2x2([simd_double2(1, 2), simd_double2(3, 4)])
+        let muMat = MUMatrix(arrayLiteral: [1.0, 2.0], [3.0, 4.0])
+        XCTAssertEqual(simMat.determinant, muMat.determinant)
     }
 
     func testCofactor() {
@@ -160,9 +171,23 @@ class MUMatrixTests: XCTestCase {
         let bIdentity = MUMatrix(arrayLiteral: [1, 0, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1])
         XCTAssertEqual(b, bIdentity)
     }
+
+    func testDot() {
+        let a = MUMatrix(arrayLiteral: [1.0/6.0, 1.0/6.0], [-0.5, 0.5])
+        let b = MUMatrix(arrayLiteral: [-3.0], [-6.0])
+        let expected = MUMatrix(arrayLiteral: [-1.5], [-1.5])
+        XCTAssertEqual(a • b, expected)
+    }
+
+    func testTranspose() {
+        let a = MUMatrix(arrayLiteral: [1, 2], [3, 4], [5, 6])
+        let aTranspose = MUMatrix(arrayLiteral: [1, 3, 5], [2, 4, 6])
+        XCTAssertEqual(a.transpose, aTranspose)
+        XCTAssertEqual(aTranspose.transpose, a)
+    }
 }
 
-public func XCTAssertEqual<T: MUFloatingPoint & CustomStringConvertible>(_ expression1: MUMatrix<T>, _ expression2: MUMatrix<T>, accuracy: T, _ message: @autoclosure () -> String = "", file: StaticString = #filePath, line: UInt = #line) {
+public func XCTAssertEqual<T: MUFloatingPoint>(_ expression1: MUMatrix<T>, _ expression2: MUMatrix<T>, accuracy: T, _ message: @autoclosure () -> String = "", file: StaticString = #filePath, line: UInt = #line) {
     XCTAssertEqual(expression1.rowsCount, expression2.rowsCount)
     XCTAssertEqual(expression1.columnsCount, expression2.columnsCount)
     expression1.enumerated().forEach { row, col, value in
