@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0422D4AA25470DE90054EE36 /* MUSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422D4A925470DE90054EE36 /* MUSize.swift */; };
+		04CF2CB3266E025B005EF72D /* Pythagore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF2CB2266E025B005EF72D /* Pythagore.swift */; };
+		04CF2CB9266E083C005EF72D /* PythagoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF2CB8266E083C005EF72D /* PythagoreTests.swift */; };
 		F3BCA9912615AAD900D89D98 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA98E2615AAD900D89D98 /* NibView.swift */; };
 		F3BCA9922615AAD900D89D98 /* MUTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA98F2615AAD900D89D98 /* MUTimeInterval.swift */; };
 		F3BCA9932615AAD900D89D98 /* MUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA9902615AAD900D89D98 /* MUInt.swift */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		0422D4A925470DE90054EE36 /* MUSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUSize.swift; sourceTree = "<group>"; };
+		04CF2CB2266E025B005EF72D /* Pythagore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pythagore.swift; sourceTree = "<group>"; };
+		04CF2CB8266E083C005EF72D /* PythagoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythagoreTests.swift; sourceTree = "<group>"; };
 		04F90FB62547088A00E648D9 /* SingleViewPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingleViewPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F3BCA98E2615AAD900D89D98 /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		F3BCA98F2615AAD900D89D98 /* MUTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUTimeInterval.swift; sourceTree = "<group>"; };
@@ -113,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04CF2CB1266E0221005EF72D /* Pythagore */ = {
+			isa = PBXGroup;
+			children = (
+				04CF2CB2266E025B005EF72D /* Pythagore.swift */,
+			);
+			path = Pythagore;
+			sourceTree = "<group>";
+		};
 		F3D9CA2D23CC86220024BA92 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +172,7 @@
 				F3D9CA5A23CC87D10024BA92 /* MUString.swift */,
 				F3D9CA5723CC87D10024BA92 /* MUViewController.swift */,
 				F3D9CA4E23CC87D10024BA92 /* MUWeakProxy.swift */,
+				04CF2CB1266E0221005EF72D /* Pythagore */,
 				F3D9CA5D23CC87D10024BA92 /* Quad_Matrix */,
 				F3D9CA4623CC87D10024BA92 /* View */,
 			);
@@ -205,6 +218,7 @@
 		F3D9CA8223CC88690024BA92 /* NeumannTests */ = {
 			isa = PBXGroup;
 			children = (
+				04CF2CB8266E083C005EF72D /* PythagoreTests.swift */,
 				F3D9CA9423CC8F5E0024BA92 /* MUCoreTests.swift */,
 				F3D9CA8C23CC88920024BA92 /* MUColorTests.swift */,
 				F3D9CA8D23CC88920024BA92 /* MUMatrix_Quad */,
@@ -353,6 +367,7 @@
 				F3D9CA7923CC87D10024BA92 /* MUTransform3D.swift in Sources */,
 				F3D9CA7023CC87D10024BA92 /* MUColor.swift in Sources */,
 				F3D9CA6723CC87D10024BA92 /* MULayoutAnchor.swift in Sources */,
+				04CF2CB3266E025B005EF72D /* Pythagore.swift in Sources */,
 				F3BCA9922615AAD900D89D98 /* MUTimeInterval.swift in Sources */,
 				F3D9CA6923CC87D10024BA92 /* MUAutolayoutPosition.swift in Sources */,
 				F3BCA9972615AAF000D89D98 /* MUActivityIndicatorView.swift in Sources */,
@@ -375,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D9CA9223CC88920024BA92 /* MUMatrixTests.swift in Sources */,
+				04CF2CB9266E083C005EF72D /* PythagoreTests.swift in Sources */,
 				F3D9CA9323CC88920024BA92 /* MUViewGradientTests.swift in Sources */,
 				F3D9CA9523CC8F5E0024BA92 /* MUCoreTests.swift in Sources */,
 				F3D9CA9123CC88920024BA92 /* MUColorTests.swift in Sources */,
