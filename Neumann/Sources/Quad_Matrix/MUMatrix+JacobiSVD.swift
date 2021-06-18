@@ -97,7 +97,7 @@ extension MUMatrix {
 
                     p *= 2
                     let beta = wA - wB
-                    let gamma = T.hypotenuse(p, beta)
+                    let gamma = Pythagore.hypotenuse(adjacent: p, opposite: beta)
 
                     if beta < 0 {
                         sine = sqrt(((gamma - beta) * T(0.5)) / gamma)

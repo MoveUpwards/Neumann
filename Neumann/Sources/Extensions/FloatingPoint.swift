@@ -17,6 +17,9 @@ extension FloatingPoint {
     /// Convert current radians to degrees
     public var toDegrees: Self { self * Self(180) / .pi }
 
+    /// A very close to 0 number
+    static var epsilon: Self { Self(8.85418782e-12) }
+
     /// Cast a Double to FloatingPoint
     public init(_ value: Double) {
         guard !value.isNaN else {

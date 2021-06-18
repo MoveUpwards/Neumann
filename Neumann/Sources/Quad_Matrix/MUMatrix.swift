@@ -7,7 +7,7 @@
 //
 
 /// MUMatrix struct of floating point elements
-public struct MUMatrix<T: MUFloatingPoint> {
+public struct MUMatrix<T: FloatingPoint & ExpressibleByFloatLiteral> {
     /// 2D array of matrix datas.
     public private(set) var datas: [[T]]
     /// Number of rows.

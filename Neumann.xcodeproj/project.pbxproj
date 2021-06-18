@@ -27,7 +27,6 @@
 		F3D9CA6A23CC87D10024BA92 /* MUWeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4E23CC87D10024BA92 /* MUWeakProxy.swift */; };
 		F3D9CA6B23CC87D10024BA92 /* MURange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA4F23CC87D10024BA92 /* MURange.swift */; };
 		F3D9CA6D23CC87D10024BA92 /* MUCornerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */; };
-		F3D9CA6F23CC87D10024BA92 /* MUMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5423CC87D10024BA92 /* MUMath.swift */; };
 		F3D9CA7023CC87D10024BA92 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5523CC87D10024BA92 /* Color.swift */; };
 		F3D9CA7223CC87D10024BA92 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5723CC87D10024BA92 /* UIViewController.swift */; };
 		F3D9CA7323CC87D10024BA92 /* MUProportionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9CA5823CC87D10024BA92 /* MUProportionalView.swift */; };
@@ -82,7 +81,6 @@
 		F3D9CA4E23CC87D10024BA92 /* MUWeakProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUWeakProxy.swift; sourceTree = "<group>"; };
 		F3D9CA4F23CC87D10024BA92 /* MURange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MURange.swift; sourceTree = "<group>"; };
 		F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUCornerStyle.swift; sourceTree = "<group>"; };
-		F3D9CA5423CC87D10024BA92 /* MUMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUMath.swift; sourceTree = "<group>"; };
 		F3D9CA5523CC87D10024BA92 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F3D9CA5723CC87D10024BA92 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F3D9CA5823CC87D10024BA92 /* MUProportionalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUProportionalView.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 				04F5BBA1267C858E006C9DE7 /* Extensions */,
 				F3BCA98E2615AAD900D89D98 /* NibView.swift */,
 				F3D9CA5223CC87D10024BA92 /* MUCornerStyle.swift */,
-				F3D9CA5423CC87D10024BA92 /* MUMath.swift */,
 				F3D9CA5823CC87D10024BA92 /* MUProportionalView.swift */,
 				F3D9CA4F23CC87D10024BA92 /* MURange.swift */,
 				F3D9CA4E23CC87D10024BA92 /* MUWeakProxy.swift */,
@@ -390,7 +387,6 @@
 				F3D9CA7523CC87D10024BA92 /* String.swift in Sources */,
 				F3D9CA7B23CC87D10024BA92 /* MUMatrix.swift in Sources */,
 				04F5BBB5267C86D8006C9DE7 /* FloatingPoint.swift in Sources */,
-				F3D9CA6F23CC87D10024BA92 /* MUMath.swift in Sources */,
 				F3D9CA7423CC87D10024BA92 /* Image.swift in Sources */,
 				F3BCA9912615AAD900D89D98 /* NibView.swift in Sources */,
 				F3D9CA6623CC87D10024BA92 /* MUView+Autolayout.swift in Sources */,
