@@ -18,60 +18,6 @@ public protocol MUFloatingPoint: FloatingPoint & ExpressibleByFloatLiteral {
     init(_ double: Double)
 }
 
-extension FloatingPoint {
-    /// Convert current degrees to radians
-    public var toRadians: Self { .pi * self / Self(180) }
-
-    /// Convert current radians to degrees
-    public var toDegrees: Self { self * Self(180) / .pi }
-
-    /// Calculate cos for FloatingPoint
-    public static func cosfp(_ value: Self) -> Self {
-        let valued = Double(value)
-        let cosd = cos(valued)
-        return Self(cosd) //Self(cosd)
-    }
-
-    public init(_ value: Double) {
-        guard !value.isNaN else {
-            self = .zero
-            return
-        }
-        guard !value.isInfinite else {
-            self = .infinity
-            return
-        }
-        let tmp = value * 1e16
-        guard tmp < Double(Int64.max) else {
-            self = .infinity
-            return
-        }
-        guard tmp > Double(Int64.min) else {
-            self = -.infinity
-            return
-        }
-        self = Self(Int(value * 1e16)) / Self(Int(1e16))
-    }
-}
-
-extension Double {
-    /// Init with a FloatingPoint or .zero if impossible
-    public init<Source>(_ value: Source) where Source : FloatingPoint {
-        switch value {
-        case is Double:
-            self = Double(value as? Double ?? .zero)
-        case is Float:
-            self = Double(value as? Float ?? .zero)
-        case is Float80:
-            self = Double(value as? Float80 ?? .zero)
-        case is CGFloat:
-            self = Double(value as? CGFloat ?? .zero)
-        default:
-            self = .zero
-        }
-    }
-}
-
 #if canImport(CoreGraphics)
 
 import CoreGraphics
