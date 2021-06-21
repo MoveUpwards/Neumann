@@ -20,6 +20,9 @@ extension FloatingPoint {
     /// A very close to 0 number
     static var epsilon: Self { Self(8.85418782e-12) }
 
+    /// The conventional gravitational acceleration on Earth's surface
+    static var g: Self { Self(9.80665) }
+
     /// Cast a Double to FloatingPoint
     public init(_ value: Double) {
         guard !value.isNaN else {
