@@ -187,7 +187,7 @@ class MUMatrixTests: XCTestCase {
     }
 }
 
-public func XCTAssertEqual<T: MUFloatingPoint>(_ expression1: MUMatrix<T>, _ expression2: MUMatrix<T>, accuracy: T, _ message: @autoclosure () -> String = "", file: StaticString = #filePath, line: UInt = #line) {
+public func XCTAssertEqual<T: FloatingPoint & ExpressibleByFloatLiteral>(_ expression1: MUMatrix<T>, _ expression2: MUMatrix<T>, accuracy: T, _ message: @autoclosure () -> String = "", file: StaticString = #filePath, line: UInt = #line) {
     XCTAssertEqual(expression1.rowsCount, expression2.rowsCount)
     XCTAssertEqual(expression1.columnsCount, expression2.columnsCount)
     expression1.enumerated().forEach { row, col, value in
