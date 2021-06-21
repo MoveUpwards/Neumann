@@ -18,10 +18,10 @@ extension FloatingPoint {
     public var toDegrees: Self { self * Self(180) / .pi }
 
     /// A very close to 0 number
-    static var epsilon: Self { Self(8.85418782e-12) }
+    public static var epsilon: Self { Self(8.85418782e-12) }
 
     /// The conventional gravitational acceleration on Earth's surface
-    static var g: Self { Self(9.80665) }
+    public static var g: Self { Self(9.80665) }
 
     /// Cast a Double to FloatingPoint
     public init(_ value: Double) {
