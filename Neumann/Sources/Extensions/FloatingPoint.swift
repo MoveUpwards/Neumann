@@ -54,8 +54,10 @@ extension Double {
             self = Double(value as? Double ?? .zero)
         case is Float:
             self = Double(value as? Float ?? .zero)
+#if !os(Windows) && (arch(i386) || arch(x86_64))
         case is Float80:
             self = Double(value as? Float80 ?? .zero)
+#endif
 #if canImport(CoreGraphics)
         case is CGFloat:
             self = Double(value as? CGFloat ?? .zero)
