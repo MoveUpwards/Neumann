@@ -10,7 +10,7 @@
 
 import Foundation
 
-public protocol Weakable: class {
+public protocol Weakable: AnyObject {
     func updateIfNeeded()
 }
 
