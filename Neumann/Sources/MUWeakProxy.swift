@@ -6,7 +6,7 @@
 //  Copyright © 2018 Loïc GRIFFIE. All rights reserved.
 //
 
-#if canImport(Foundation)
+#if canImport(Foundation) && !os(Linux)
 
 import Foundation
 
