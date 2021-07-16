@@ -16,7 +16,7 @@ import UIKit.UIActivityIndicatorView
 extension UIActivityIndicatorView: MUActivityIndicatorProtocol { }
 
 /// Activity indicator protocol.
-@objc public protocol MUActivityIndicatorProtocol: class {
+@objc public protocol MUActivityIndicatorProtocol: AnyObject {
     /// Start indicator animation.
     func startAnimating()
 

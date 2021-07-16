@@ -42,7 +42,7 @@ extension FloatingPoint {
             self = -.infinity
             return
         }
-        self = Self(Int(value * 1e16)) / Self(Int(1e16))
+        self = Self(Int64(value * 1e16)) / Self(Int64(1e16))
     }
 }
 
