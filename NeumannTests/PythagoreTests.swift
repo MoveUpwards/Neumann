@@ -112,8 +112,10 @@ class PythagoreTests: XCTestCase {
     func testFloatingPoint() throws {
         XCTAssertEqual(Float(Pythagore.adjacent(opposite: 10.0, alpha: 45.0.toRadians)),
                        Pythagore.adjacent(opposite: Float(10), alpha: Float(45).toRadians))
+#if !os(Windows) && (arch(i386) || arch(x86_64))
         XCTAssertEqual(Float80(Pythagore.adjacent(opposite: 10.0, alpha: 45.0.toRadians)),
                        Pythagore.adjacent(opposite: Float80(10), alpha: Float80(45).toRadians), accuracy: 1e-15)
+#endif
         XCTAssertEqual(CGFloat(Pythagore.adjacent(opposite: 10.0, alpha: 45.0.toRadians)),
                        Pythagore.adjacent(opposite: CGFloat(10), alpha: CGFloat(45).toRadians), accuracy: 1e-15)
     }

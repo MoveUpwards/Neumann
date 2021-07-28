@@ -46,6 +46,9 @@ extension FloatingPoint {
     }
 }
 
+/// Hav is Haversine(θ) function (https://en.wikipedia.org/wiki/Haversine_formula)
+public func hav<T: FloatingPoint>(_ theta: T) -> T { T(pow(sin(Double(theta) / 2.0), 2.0)) }
+
 extension Double {
     /// Init with a FloatingPoint or .zero if impossible
     public init<Source>(_ value: Source) where Source : FloatingPoint {
