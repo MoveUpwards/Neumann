@@ -14,12 +14,15 @@ let package = Package(
             targets: ["Neumann"]
         ),
     ],
-    dependencies: [ ],
+    dependencies: [],
     targets: [
         .target(
             name: "Neumann",
             dependencies: [],
-            path: "Neumann/Sources"
-        ),
+            path: "Neumann/Sources"),
+        .testTarget(
+            name: "NeumannTests",
+            dependencies: ["Neumann"],
+            path: "NeumannTests"),
     ]
 )

@@ -6,6 +6,8 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 @testable import Neumann
 
@@ -47,3 +49,5 @@ class MUColorTests: XCTestCase {
         XCTAssertNotEqual(color, wrongColor)
     }
 }
+
+#endif
