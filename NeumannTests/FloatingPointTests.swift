@@ -26,9 +26,11 @@ class MUMathTests: XCTestCase {
         let e: Float = cast(Double(Int.max)+1.0)
         XCTAssertTrue(e.isInfinite)
         XCTAssertEqual(e, .infinity)
+#if !os(Windows) && (arch(i386) || arch(x86_64))
         let f: Float80 = cast(Double(Int.max)+1.0)
         XCTAssertTrue(f.isInfinite)
         XCTAssertEqual(f, .infinity)
+#endif
 
         let g: Float = cast(Double(Int.min)-1.0)
         XCTAssertTrue(g.isInfinite)
@@ -49,17 +51,31 @@ class MUMathTests: XCTestCase {
         XCTAssertEqual(b, 1.5)
         let c: Double = cast(Double(0.33333333333333))
         XCTAssertEqual(c, 0.33333333333333)
+#if !os(Windows) && (arch(i386) || arch(x86_64))
         let d: Double = cast(Float80.pi)
         XCTAssertEqual(d, .pi)
+#endif
     }
 
     private func cast<T: FloatingPoint>(_ value: T) -> Double {
         return Double(value)
     }
 
-    @available(iOS 14.0, *)
+    @available(macOS 11.0, iOS 14.0, *)
     func testCastFail() throws {
         let a: Double = cast(Float16.pi)
         XCTAssertEqual(a, .zero) // Remove this test if the Double cast use it
+    }
+
+    func testHaversine() throws {
+        let d = 100.0 // d is the distance between the two points along a great circle of the sphere
+        let r = 6378137.0 // r is the radius of the sphere
+        let θ = d / r
+
+        let haversine = hav(θ)
+
+        // Two way to calculate
+        XCTAssertEqual(haversine, pow(sin(θ / 2.0), 2.0), accuracy: 1e-17)
+        XCTAssertEqual(haversine, (1 - cos(θ)) / 2.0, accuracy: 1e-16)
     }
 }

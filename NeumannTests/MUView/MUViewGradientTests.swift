@@ -6,6 +6,8 @@
 //  Copyright © 2019 Loïc GRIFFIE. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 @testable import Neumann
 
@@ -27,3 +29,5 @@ class MUViewGradientTests: XCTestCase {
         XCTAssertEqual(view.layer.sublayers?.count, 2) // Still 2 layers as the GradientLayer is replaced
     }
 }
+
+#endif
