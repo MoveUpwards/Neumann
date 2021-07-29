@@ -6,6 +6,7 @@
 //  Copyright © 2021 Loïc GRIFFIE. All rights reserved.
 //
 
+import Foundation
 #if canImport(CoreGraphics)
 import CoreGraphics
 #endif
