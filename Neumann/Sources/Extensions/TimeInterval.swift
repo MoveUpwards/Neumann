@@ -10,6 +10,16 @@
 import Foundation
 
 extension TimeInterval {
+
+    /// Return the number of hours
+    public var hours: Int { ((Int(self) - seconds - minutes*60) / 3600) }
+
+    /// Return the number of minutes
+    public var minutes: Int { ((Int(self) - seconds) / 60) % 60 }
+
+    /// Return the number of seconds
+    public var seconds: Int { Int(self) % 60 }
+
     /// Show the duration as a Clock Timer representation
     public func toClockTimer(with format: String = "HH:mm:ss") -> String {
         let formatter = DateFormatter()
@@ -20,18 +30,10 @@ extension TimeInterval {
 
     /// Show the duration with 2 values representations, i.e. 1h22m or 23m45s or only 40s
     public var duration: String {
-        var value = Int(self)
-        let seconds = value % 60
-        guard self > 60 else {
-            return "\(seconds)s"
-        }
-        value -= seconds
-        let minutes = (value / 60) % 60
-        guard self > 3600 else {
-            return "\(minutes)m\(seconds.twoDigit)s"
-        }
-        value -= minutes*60
-        let hours = value / 3600
+        guard self > 60 else { return "\(seconds)s" }
+
+        guard self > 3600 else { return "\(minutes)m\(seconds.twoDigit)s" }
+
         return "\(hours)h\(minutes.twoDigit)m"
     }
 }
